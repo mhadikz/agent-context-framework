@@ -1,6 +1,10 @@
 # 🤖 AI Context Framework Templates
 
-` 📝 License: MIT ` &nbsp; ` 🤝 PRs: Welcome `
+
+| 📝 License | 🤝 Contributions | 🤖 Target |
+| :--- | :--- | :--- |
+| ` MIT ` | ` PRs Welcome ` | ` AI Coding Agents ` |
+
 
 A collection of 10 industry-standard Markdown (`.md`) blueprints designed to act as an "onboarding manual" for AI coding agents and LLM assistants. By placing these files in your project root, you dramatically reduce AI hallucinations, prevent scope creep, and save thousands of context window tokens.
 
