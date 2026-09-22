@@ -1,7 +1,6 @@
 # 🤖 AI Context Framework Templates
 
-[![GitHub License](https://shields.io)](LICENSE)
-[![PRs Welcome](https://shields.io)](http://makeapullrequest.com)
+` 📝 License: MIT ` &nbsp; ` 🤝 PRs: Welcome `
 
 A collection of 10 industry-standard Markdown (`.md`) blueprints designed to act as an "onboarding manual" for AI coding agents and LLM assistants. By placing these files in your project root, you dramatically reduce AI hallucinations, prevent scope creep, and save thousands of context window tokens.
 
