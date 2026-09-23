@@ -34,7 +34,7 @@ Use these exact commands when running, building, testing, or deploying this appl
 - **Scope Creep:** Do not add microservices, event sourcing, CQRS stacks for CRUD, or a new client state library. Do not split a package until two apps share it or the boundary is already painful. Stay inside the requested module.
 
 ## Context files
-Read these at the start of a session, and again before architecture, API, or copy changes.
+Read these at the start of a session, and again before architecture, API, data, operations, or copy changes.
 - `docs/context/SKILL.md`
 - `docs/context/PLAN.md`
 - `docs/context/BACKLOG.md`
@@ -43,3 +43,6 @@ Read these at the start of a session, and again before architecture, API, or cop
 - `docs/context/DECISIONS.md`
 - `docs/context/VOICE.md`
 - `docs/context/CONTRACT.md`
+- `docs/context/RUNBOOK.md`
+- `docs/context/DATA.md`
+- `docs/context/GLOSSARY.md`

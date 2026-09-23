@@ -32,7 +32,7 @@ Use these exact commands when running, building, testing, or deploying this appl
 - **Scope Creep:** Do not add a microservice, CQRS, event sourcing, or a second design system without an accepted ADR. Do not weaken security headers or log personal data to make debugging easier.
 
 ## Context files
-Read these at the start of a session, and again before architecture, API, or copy changes.
+Read these at the start of a session, and again before architecture, API, data, operations, or copy changes.
 - `docs/context/SKILL.md`
 - `docs/context/PLAN.md`
 - `docs/context/BACKLOG.md`
@@ -41,3 +41,7 @@ Read these at the start of a session, and again before architecture, API, or cop
 - `docs/context/DECISIONS.md`
 - `docs/context/VOICE.md`
 - `docs/context/CONTRACT.md`
+- `docs/context/RUNBOOK.md`
+- `docs/context/DATA.md`
+- `docs/context/GLOSSARY.md`
+- `docs/context/CONTEXT-MAP.md`

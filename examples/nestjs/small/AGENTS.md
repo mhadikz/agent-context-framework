@@ -34,7 +34,7 @@ Use these exact commands when running, building, testing, or deploying this appl
 - **Scope Creep:** Do not add microservice transports, CQRS buses, event sourcing, a message broker, or a generic repository layer that only wraps the ORM. Do not refactor unrelated modules.
 
 ## Context files
-Read these at the start of a session, and again before architecture, API, or copy changes.
+Read these at the start of a session, and again before architecture, API, data, operations, or copy changes.
 - `docs/context/SKILL.md`
 - `docs/context/PLAN.md`
 - `docs/context/BACKLOG.md`
@@ -43,3 +43,5 @@ Read these at the start of a session, and again before architecture, API, or cop
 - `docs/context/DECISIONS.md`
 - `docs/context/VOICE.md`
 - `docs/context/CONTRACT.md`
+- `docs/context/RUNBOOK.md`
+- `docs/context/DATA.md`

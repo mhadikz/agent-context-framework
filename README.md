@@ -35,6 +35,10 @@ This framework solves that by dividing project context into **three specialized 
 *   [`DECISIONS.md`](./templates/DECISIONS.md) - **Architectural Decision Records (ADRs):** Documents *why* technical choices were made so the AI doesn't try to refactor your stack arbitrarily.
 *   [`VOICE.md` / `BRAND.md`](./templates/VOICE.md) - **Copy Writing Guidelines:** Ensures AI-generated user copy, errors, and notifications remain on-brand.
 *   [`CONTRACT.md`](./templates/CONTRACT.md) - **Environment & API Mocks:** Holds system versions and secure `.env` structures without exposing real secrets.
+*   [`RUNBOOK.md`](./templates/RUNBOOK.md) - **Operations:** How to deploy, detect a bad release, roll back, and restore data.
+*   [`DATA.md`](./templates/DATA.md) - **Data Register:** What personal data is stored, why, who can read it, and how it is deleted.
+*   [`GLOSSARY.md`](./templates/GLOSSARY.md) - **Ubiquitous Language:** Business terms the code must use. Medium and enterprise examples include it.
+*   [`CONTEXT-MAP.md`](./templates/CONTEXT-MAP.md) - **Bounded Contexts:** Who owns which data. Enterprise examples include it.
 
 ### 🧱 Stack and team-size examples
 
@@ -46,7 +50,7 @@ Filled-in copies of the same files, already arranged the way a project should st
 | Medium (several squads) | [`examples/nextjs/medium`](./examples/nextjs/medium/AGENTS.md) | [`examples/nestjs/medium`](./examples/nestjs/medium/AGENTS.md) |
 | Large / enterprise | [`examples/nextjs/enterprise`](./examples/nextjs/enterprise/AGENTS.md) | [`examples/nestjs/enterprise`](./examples/nestjs/enterprise/AGENTS.md) |
 
-The same rule is baked into every size: production foundations are mandatory; Clean Architecture, DDD, CQRS, event sourcing, and microservices are adopted only when the domain or the organization needs them.
+The same rule is baked into every size: production foundations are mandatory; Clean Architecture, DDD, CQRS, event sourcing, and microservices are adopted only when the domain or the organization needs them. The full standard, including what each team size must take from it, is [`ENGINEERING.md`](./ENGINEERING.md).
 
 ---
 
@@ -69,6 +73,10 @@ docs/context/
   DECISIONS.md
   VOICE.md
   CONTRACT.md
+  RUNBOOK.md
+  DATA.md
+  GLOSSARY.md       # medium and enterprise
+  CONTEXT-MAP.md    # enterprise
 ```
 
 4. Fill out the `[...]` placeholders inside each file to match your project's technology stack.

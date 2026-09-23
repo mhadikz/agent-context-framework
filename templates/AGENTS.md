@@ -22,3 +22,18 @@ Use these exact commands when running, building, testing, or deploying this appl
 - **Package Integrity:** Never install or update any dependency packages without asking for user confirmation.
 - **Destructive Actions:** Do not execute database drops or directory deletions autonomously.
 - **Scope Creep:** Stick exactly to the requested feature. Do not arbitrarily refactor surrounding files.
+
+## Context files
+Read these at the start of a session, and again before architecture, API, data, or copy changes.
+- `docs/context/SKILL.md`
+- `docs/context/PLAN.md`
+- `docs/context/BACKLOG.md`
+- `docs/context/SESSIONS.md`
+- `docs/context/DESIGN.md`
+- `docs/context/DECISIONS.md`
+- `docs/context/VOICE.md`
+- `docs/context/CONTRACT.md`
+- `docs/context/RUNBOOK.md`
+- `docs/context/DATA.md`
+- `docs/context/GLOSSARY.md` when more than one squad shares the domain
+- `docs/context/CONTEXT-MAP.md` when there is more than one bounded context

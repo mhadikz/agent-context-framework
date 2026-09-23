@@ -34,7 +34,7 @@ Use these exact commands when running, building, testing, or deploying this appl
 - **Scope Creep:** Stick to the requested feature. Do not add a monorepo, a second service, CQRS, event sourcing, a message broker, or Kubernetes. Do not refactor surrounding files into Clean Architecture.
 
 ## Context files
-Read these at the start of a session, and again before architecture, API, or copy changes.
+Read these at the start of a session, and again before architecture, API, data, operations, or copy changes.
 - `docs/context/SKILL.md`
 - `docs/context/PLAN.md`
 - `docs/context/BACKLOG.md`
@@ -43,3 +43,5 @@ Read these at the start of a session, and again before architecture, API, or cop
 - `docs/context/DECISIONS.md`
 - `docs/context/VOICE.md`
 - `docs/context/CONTRACT.md`
+- `docs/context/RUNBOOK.md`
+- `docs/context/DATA.md`
