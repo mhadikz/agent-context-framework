@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mhadikz.github.io/agent-context-framework/sitemap.xml

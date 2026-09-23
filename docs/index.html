@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Context Framework — onboarding manuals for Cursor, Claude Code, Copilot, and Gemini</title>
+  <meta name="description" content="Markdown templates that keep AI coding agents inside your architecture. Use AGENTS.md, CLAUDE.md, and docs/context for Next.js and NestJS teams, from a small product to an enterprise.">
+  <meta name="author" content="Hadi">
+  <link rel="canonical" href="https://mhadikz.github.io/agent-context-framework/">
+  <meta name="theme-color" content="#1f4d3a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Context Framework — onboarding manuals for coding agents">
+  <meta property="og:description" content="Stop context rotting. Give Cursor, Claude Code, Copilot, and Gemini a small set of project files for rules, the sprint, and the architecture.">
+  <meta property="og:url" content="https://mhadikz.github.io/agent-context-framework/">
+  <meta property="og:image" content="https://mhadikz.github.io/agent-context-framework/favicon.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Context Framework">
+  <meta name="twitter:description" content="Project context files for AI coding agents. Next.js and NestJS examples for small, medium, and enterprise teams.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "AI Context Framework",
+    "description": "Markdown blueprints that act as an onboarding manual for AI coding agents such as Cursor, Claude Code, GitHub Copilot, and Gemini.",
+    "codeRepository": "https://github.com/mhadikz/agent-context-framework",
+    "url": "https://mhadikz.github.io/agent-context-framework/",
+    "programmingLanguage": "Markdown",
+    "license": "https://github.com/mhadikz/agent-context-framework/blob/master/LICENSE",
+    "author": { "@type": "Person", "name": "Hadi" },
+    "keywords": "AGENTS.md, CLAUDE.md, Cursor, Claude Code, GitHub Copilot, Gemini, Next.js, NestJS, AI coding agents"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top">
+        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="6" fill="#1f4d3a"/>
+          <path d="M8 10h16M8 16h10M8 22h13" stroke="#f3efe4" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        AI Context Framework
+      </a>
+      <nav class="nav" aria-label="Page">
+        <a href="#why">Why</a>
+        <a href="#when">When</a>
+        <a href="#how">How</a>
+        <a href="#files">Files</a>
+        <a href="https://github.com/mhadikz/agent-context-framework">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap hero" id="top">
+      <div>
+        <p class="kicker">Markdown context for coding agents</p>
+        <h1>Give the agent a manual, not a memory.</h1>
+        <p class="lede">Cursor, Claude Code, Copilot, Gemini, Aider, and Windsurf forget project boundaries in a long chat. These files are the onboarding manual: how to build, what is in scope, and which architecture is already decided.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/mhadikz/agent-context-framework">Use the templates</a>
+          <a class="button ghost" href="#how">See how to install them</a>
+        </div>
+      </div>
+      <pre class="tree" aria-label="Where the files live in a project"><span class="dim"># project root — tools load these</span>
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+<span class="dim"># read when the task needs them</span>
+docs/context/
+  SKILL.md
+  PLAN.md
+  BACKLOG.md
+  DECISIONS.md
+  CONTRACT.md
+  RUNBOOK.md
+  DATA.md</pre>
+    </div>
+
+    <section id="why">
+      <div class="wrap">
+        <div class="section-intro">
+          <p class="kicker">Why you need it</p>
+          <h2>Long chats rot. Files do not.</h2>
+          <p>A fresh chat should already know the stack, the commands, the error shape, and what the team refused to adopt. You stop repeating the same constraints, and the agent stops inventing a second architecture beside the one you have.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <p class="num">01 — Rules</p>
+            <h3>How to behave</h3>
+            <p><code>AGENTS.md</code> is the directive Cursor, Copilot, and Codex load from the root. <code>CLAUDE.md</code> and <code>GEMINI.md</code> are the entry points those CLIs actually look for.</p>
+          </article>
+          <article class="card">
+            <p class="num">02 — Sprint</p>
+            <h3>What to build next</h3>
+            <p><code>PLAN.md</code> holds the goal and the non-goals. <code>BACKLOG.md</code> is the queue. <code>SESSIONS.md</code> is the short memory a new chat can resume from.</p>
+          </article>
+          <article class="card">
+            <p class="num">03 — Governance</p>
+            <h3>What not to rewrite</h3>
+            <p><code>DECISIONS.md</code> records why the stack exists. Design, voice, API contracts, the data register, and the runbook keep later changes inside the same system.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="when">
+      <div class="wrap">
+        <div class="section-intro">
+          <p class="kicker">When to use it</p>
+          <h2>Pick the team size, then the stack.</h2>
+          <p>Every production app needs the same foundations: boundaries, validation, authorization, tests, errors, logs, migrations, and CI. Clean Architecture, tactical DDD, CQRS, event sourcing, and microservices show up only when a real problem needs them.</p>
+        </div>
+        <div class="grid-3">
+          <article class="size">
+            <span class="tag">Small · 1–8 engineers</span>
+            <h3>One product, one deployable</h3>
+            <p>Feature folders, one PostgreSQL, server-side authorization. No hexagonal ceremony and no extra service. Next.js or NestJS examples are ready to copy.</p>
+          </article>
+          <article class="size">
+            <span class="tag">Medium · several squads</span>
+            <h3>A modular monolith</h3>
+            <p>Layers only inside complex domains. Vendor ports, compatible migrations, a glossary, and a runbook. Still one product, not a service per module.</p>
+          </article>
+          <article class="size">
+            <span class="tag">Large · enterprise</span>
+            <h3>Contexts with owners</h3>
+            <p>A context map, versioned contracts, audit, and a written reason before any service is extracted. The company being large is not that reason.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-intro">
+          <p class="kicker">How to use it</p>
+          <h2>Copy one folder into the project root.</h2>
+          <p>Blank files live in <code>templates/</code>. Next.js and NestJS examples are already arranged in the layout below. Copy the contents of one size folder, then fill the <code>[...]</code> placeholders.</p>
+        </div>
+        <div class="grid-2">
+          <ol class="steps">
+            <li class="step">
+              <p class="num">Step 1</p>
+              <h3>Choose a set</h3>
+              <p>Generic templates for any stack. Or <code>examples/nextjs/&lt;size&gt;</code> and <code>examples/nestjs/&lt;size&gt;</code> for small, medium, and enterprise.</p>
+            </li>
+            <li class="step">
+              <p class="num">Step 2</p>
+              <h3>Keep three files at the root</h3>
+              <p><code>AGENTS.md</code>, <code>CLAUDE.md</code>, and <code>GEMINI.md</code> stay at the root because those tools load them automatically. Everything else goes in <code>docs/context/</code>.</p>
+            </li>
+            <li class="step">
+              <p class="num">Step 3</p>
+              <h3>Point the agent at the rest</h3>
+              <p>The root <code>AGENTS.md</code> lists the context files. The agent reads them at the start of a session, and again before architecture, API, data, or copy changes.</p>
+            </li>
+            <li class="step">
+              <p class="num">Step 4</p>
+              <h3>Update the living files</h3>
+              <p>Refresh <code>SESSIONS.md</code> and <code>BACKLOG.md</code> at the end of a working session. Keep each root file under 300 lines.</p>
+            </li>
+          </ol>
+          <div>
+            <h3>Where each tool looks</h3>
+            <ul class="file-list">
+              <li>Cursor, GitHub Copilot, and Codex read a root <code>AGENTS.md</code>.</li>
+              <li>Claude Code reads a root <code>CLAUDE.md</code>.</li>
+              <li>Gemini CLI reads a root <code>GEMINI.md</code>.</li>
+              <li>They do not open <code>PLAN.md</code> or <code>DECISIONS.md</code> unless <code>AGENTS.md</code> points at them.</li>
+              <li>In a monorepo, keep one set at the repository root. Add a short <code>AGENTS.md</code> in a package only when that package has its own commands.</li>
+            </ul>
+            <div class="rule">
+              <strong>The engineering rule</strong>
+              <p>Foundations are mandatory. Advanced patterns are optional. The full map of what each team size takes is in <a href="https://github.com/mhadikz/agent-context-framework/blob/master/ENGINEERING.md">ENGINEERING.md</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="files">
+      <div class="wrap">
+        <div class="section-intro">
+          <p class="kicker">The files</p>
+          <h2>One job per document.</h2>
+          <p>Copy the blanks, or start from a filled Next.js or NestJS example. Glossary and context map are for larger teams.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>File</th><th>Job</th><th>Who includes it</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>AGENTS.md</code></td><td>Stack, commands, conventions, and the index of the other files.</td><td>Every project, at the root</td></tr>
+              <tr><td><code>CLAUDE.md</code> / <code>GEMINI.md</code></td><td>Tool entry points that defer to <code>AGENTS.md</code>.</td><td>Every project, at the root</td></tr>
+              <tr><td><code>SKILL.md</code></td><td>Repeatable routines for implementing a feature safely.</td><td>Every project</td></tr>
+              <tr><td><code>PLAN.md</code></td><td>Vision, goals, and explicit non-goals.</td><td>Every project</td></tr>
+              <tr><td><code>BACKLOG.md</code></td><td>Now, next, and later.</td><td>Every project</td></tr>
+              <tr><td><code>SESSIONS.md</code></td><td>What the last session left unfinished.</td><td>Every project</td></tr>
+              <tr><td><code>DESIGN.md</code></td><td>Visual or API presentation constraints.</td><td>Every project</td></tr>
+              <tr><td><code>DECISIONS.md</code></td><td>Architectural decisions and their consequences.</td><td>Every project</td></tr>
+              <tr><td><code>VOICE.md</code></td><td>How errors and product copy should sound.</td><td>Every project</td></tr>
+              <tr><td><code>CONTRACT.md</code></td><td>Environment names and the API error envelope. No real secrets.</td><td>Every project</td></tr>
+              <tr><td><code>RUNBOOK.md</code></td><td>Deploy, detect a bad release, roll back, restore.</td><td>Every project</td></tr>
+              <tr><td><code>DATA.md</code></td><td>What personal data exists, who can read it, and how it is deleted.</td><td>Every project</td></tr>
+              <tr><td><code>GLOSSARY.md</code></td><td>Business words the code must use.</td><td>Medium and enterprise</td></tr>
+              <tr><td><code>CONTEXT-MAP.md</code></td><td>Which context owns which data.</td><td>Enterprise</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="lede" style="margin-top:1.5rem">Examples: <a href="https://github.com/mhadikz/agent-context-framework/tree/master/examples/nextjs">Next.js</a> and <a href="https://github.com/mhadikz/agent-context-framework/tree/master/examples/nestjs">NestJS</a>, each with small, medium, and enterprise folders. The project is MIT licensed.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>AI Context Framework · MIT License</span>
+      <a href="https://github.com/mhadikz/agent-context-framework">github.com/mhadikz/agent-context-framework</a>
+    </div>
+  </footer>
+</body>
+</html>

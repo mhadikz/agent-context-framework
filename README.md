@@ -6,6 +6,8 @@
 | ` MIT ` | ` PRs Welcome ` | ` AI Coding Agents ` |
 
 
+The public site is [mhadikz.github.io/agent-context-framework](https://mhadikz.github.io/agent-context-framework/).
+
 A collection of industry-standard Markdown (`.md`) blueprints designed to act as an "onboarding manual" for AI coding agents and LLM assistants. Generic templates cover any stack. Next.js and NestJS folders add architecture and production practices for small, medium, and large teams. Tool entry points stay at the project root. Everything else lives in `docs/context/`, so agents load it when the task needs it.
 
 ## 🚀 Why Use This Framework?
