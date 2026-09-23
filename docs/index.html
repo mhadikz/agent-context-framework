@@ -7,7 +7,7 @@
   <meta name="description" content="Markdown templates that keep AI coding agents inside your architecture. Use AGENTS.md, CLAUDE.md, and docs/context for Next.js and NestJS teams, from a small product to an enterprise.">
   <meta name="author" content="Hadi">
   <link rel="canonical" href="https://mhadikz.github.io/agent-context-framework/">
-  <meta name="theme-color" content="#1f4d3a">
+  <meta name="theme-color" content="#111111">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AI Context Framework — onboarding manuals for coding agents">
   <meta property="og:description" content="Stop context rotting. Give Cursor, Claude Code, Copilot, and Gemini a small set of project files for rules, the sprint, and the architecture.">
@@ -19,7 +19,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -41,9 +41,9 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="#top">
-        <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
-          <rect width="32" height="32" rx="6" fill="#1f4d3a"/>
-          <path d="M8 10h16M8 16h10M8 22h13" stroke="#f3efe4" stroke-width="2" stroke-linecap="round"/>
+        <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" fill="#ff4d00"/>
+          <path d="M7 10h18M7 16h11M7 22h14" stroke="#111" stroke-width="2.4"/>
         </svg>
         AI Context Framework
       </a>
@@ -90,18 +90,18 @@ docs/context/
           <h2>Long chats rot. Files do not.</h2>
           <p>A fresh chat should already know the stack, the commands, the error shape, and what the team refused to adopt. You stop repeating the same constraints, and the agent stops inventing a second architecture beside the one you have.</p>
         </div>
-        <div class="grid-3">
-          <article class="card">
+        <div class="bento">
+          <article class="panel span">
             <p class="num">01 — Rules</p>
             <h3>How to behave</h3>
             <p><code>AGENTS.md</code> is the directive Cursor, Copilot, and Codex load from the root. <code>CLAUDE.md</code> and <code>GEMINI.md</code> are the entry points those CLIs actually look for.</p>
           </article>
-          <article class="card">
+          <article class="panel">
             <p class="num">02 — Sprint</p>
             <h3>What to build next</h3>
             <p><code>PLAN.md</code> holds the goal and the non-goals. <code>BACKLOG.md</code> is the queue. <code>SESSIONS.md</code> is the short memory a new chat can resume from.</p>
           </article>
-          <article class="card">
+          <article class="panel wide">
             <p class="num">03 — Governance</p>
             <h3>What not to rewrite</h3>
             <p><code>DECISIONS.md</code> records why the stack exists. Design, voice, API contracts, the data register, and the runbook keep later changes inside the same system.</p>
@@ -110,30 +110,39 @@ docs/context/
       </div>
     </section>
 
-    <section class="band" id="when">
-      <div class="wrap">
+    <section id="when">
+      <div class="wrap split">
         <div class="section-intro">
           <p class="kicker">When to use it</p>
           <h2>Pick the team size, then the stack.</h2>
           <p>Every production app needs the same foundations: boundaries, validation, authorization, tests, errors, logs, migrations, and CI. Clean Architecture, tactical DDD, CQRS, event sourcing, and microservices show up only when a real problem needs them.</p>
         </div>
-        <div class="grid-3">
-          <article class="size">
-            <span class="tag">Small · 1–8 engineers</span>
-            <h3>One product, one deployable</h3>
-            <p>Feature folders, one PostgreSQL, server-side authorization. No hexagonal ceremony and no extra service. Next.js or NestJS examples are ready to copy.</p>
-          </article>
-          <article class="size">
-            <span class="tag">Medium · several squads</span>
-            <h3>A modular monolith</h3>
-            <p>Layers only inside complex domains. Vendor ports, compatible migrations, a glossary, and a runbook. Still one product, not a service per module.</p>
-          </article>
-          <article class="size">
-            <span class="tag">Large · enterprise</span>
-            <h3>Contexts with owners</h3>
-            <p>A context map, versioned contracts, audit, and a written reason before any service is extracted. The company being large is not that reason.</p>
-          </article>
-        </div>
+        <ol class="timeline">
+          <li>
+            <span class="mark">01</span>
+            <div>
+              <p class="num">Small · 1–8 engineers</p>
+              <h3>One product, one deployable</h3>
+              <p>Feature folders, one PostgreSQL, server-side authorization. No hexagonal ceremony and no extra service. Next.js or NestJS examples are ready to copy.</p>
+            </div>
+          </li>
+          <li>
+            <span class="mark">02</span>
+            <div>
+              <p class="num">Medium · several squads</p>
+              <h3>A modular monolith</h3>
+              <p>Layers only inside complex domains. Vendor ports, compatible migrations, a glossary, and a runbook. Still one product, not a service per module.</p>
+            </div>
+          </li>
+          <li>
+            <span class="mark">03</span>
+            <div>
+              <p class="num">Large · enterprise</p>
+              <h3>Contexts with owners</h3>
+              <p>A context map, versioned contracts, audit, and a written reason before any service is extracted. The company being large is not that reason.</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
