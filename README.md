@@ -6,7 +6,7 @@
 | ` MIT ` | ` PRs Welcome ` | ` AI Coding Agents ` |
 
 
-A collection of 10 industry-standard Markdown (`.md`) blueprints designed to act as an "onboarding manual" for AI coding agents and LLM assistants. By placing these files in your project root, you dramatically reduce AI hallucinations, prevent scope creep, and save thousands of context window tokens.
+A collection of industry-standard Markdown (`.md`) blueprints designed to act as an "onboarding manual" for AI coding agents and LLM assistants. Generic templates cover any stack. Next.js and NestJS folders add architecture and production practices for small, medium, and large teams. Tool entry points stay at the project root. Everything else lives in `docs/context/`, so agents load it when the task needs it.
 
 ## 🚀 Why Use This Framework?
 When working with AI tools like **Cursor, Claude Code, Aider, Windsurf, or GitHub Copilot**, LLMs often suffer from "context rotting" or forget project boundaries over long chat sessions. 
@@ -36,18 +36,51 @@ This framework solves that by dividing project context into **three specialized 
 *   [`VOICE.md` / `BRAND.md`](./templates/VOICE.md) - **Copy Writing Guidelines:** Ensures AI-generated user copy, errors, and notifications remain on-brand.
 *   [`CONTRACT.md`](./templates/CONTRACT.md) - **Environment & API Mocks:** Holds system versions and secure `.env` structures without exposing real secrets.
 
+### 🧱 Stack and team-size examples
+
+Filled-in copies of the same files, already arranged the way a project should store them. Copy the **contents** of one size folder into the project root.
+
+| Team | Next.js | NestJS |
+| --- | --- | --- |
+| Small (about 1–8 engineers, one product) | [`examples/nextjs/small`](./examples/nextjs/small/AGENTS.md) | [`examples/nestjs/small`](./examples/nestjs/small/AGENTS.md) |
+| Medium (several squads) | [`examples/nextjs/medium`](./examples/nextjs/medium/AGENTS.md) | [`examples/nestjs/medium`](./examples/nestjs/medium/AGENTS.md) |
+| Large / enterprise | [`examples/nextjs/enterprise`](./examples/nextjs/enterprise/AGENTS.md) | [`examples/nestjs/enterprise`](./examples/nestjs/enterprise/AGENTS.md) |
+
+The same rule is baked into every size: production foundations are mandatory; Clean Architecture, DDD, CQRS, event sourcing, and microservices are adopted only when the domain or the organization needs them.
+
 ---
 
 ## 🛠️ How to Use
 
 1. **Fork or Clone** this repository.
-2. Copy the `templates/` folder into the root directory of your software project.
-3. Fill out the `[...]` placeholders inside each file to match your project's technology stack.
-4. Point your AI agent to these files (e.g., in Cursor, use `@AGENTS.md` or let autonomous agents discover them natively).
+2. Copy **one** set. For a blank start, copy `templates/` and place the files yourself using the tree below. For Next.js or NestJS, copy the contents of one example folder (`examples/nextjs/<size>` or `examples/nestjs/<size>`) into the project root. That folder is already arranged correctly.
+3. The target project should look like this:
+
+```text
+AGENTS.md          # project root
+CLAUDE.md          # project root
+GEMINI.md          # project root
+docs/context/
+  SKILL.md
+  PLAN.md
+  BACKLOG.md
+  SESSIONS.md
+  DESIGN.md
+  DECISIONS.md
+  VOICE.md
+  CONTRACT.md
+```
+
+4. Fill out the `[...]` placeholders inside each file to match your project's technology stack.
+5. From `AGENTS.md`, point at `docs/context/` so the agent reads those files at the start of a session and again before architecture, API, or copy changes.
+
+Cursor, GitHub Copilot, and Codex load a root `AGENTS.md` on their own. Claude Code loads a root `CLAUDE.md` (or `.claude/CLAUDE.md`). Gemini CLI loads a root `GEMINI.md`. They do not load `PLAN.md`, `DECISIONS.md`, or the other files unless something points at them. A hidden `.cursor/` folder is the wrong place: other tools and reviewers will not see it. Cursor rules in `.cursor/rules` and Cursor skills in `.cursor/skills/<name>/SKILL.md` are separate from this set.
+
+In a monorepo, keep this single set at the repository root. Add a short `AGENTS.md` inside a package only when that package has different commands or boundaries. Do not copy the full set into every app.
 
 ## 💡 Best Practices for Token Optimization
-*   **Keep it Lean:** Keep root-level files under 300 lines. If a rule file gets too large, move extended context to a subfolder like `/docs/context/`.
-*   **Continuous Audits:** Update your `SESSIONS.md` and `BACKLOG.md` at the end of every programming session to keep the AI's memory fresh.
+*   **Keep the root to three files:** `AGENTS.md`, `CLAUDE.md`, and `GEMINI.md`. Keep each under 300 lines. The rest stays in `docs/context/`.
+*   **Continuous Audits:** Update `docs/context/SESSIONS.md` and `docs/context/BACKLOG.md` at the end of every programming session to keep the AI's memory fresh.
 
 ## 🤝 Contributing
 Contributions are welcome! If you have a template optimization or a framework-specific variation (e.g., an `AGENTS.md` optimized purely for Next.js or Python FastAPI), feel free to open a Pull Request.
